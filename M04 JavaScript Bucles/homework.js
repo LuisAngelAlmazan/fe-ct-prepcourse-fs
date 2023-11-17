@@ -1,6 +1,20 @@
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
 function obtenerMayor(x, y) {
+   
+        if (x > y) {
+         return x;
+        }
+        if (x < y) {
+         return y;
+        }
+        if (x=y) {
+            return x;
+      }
+        
+       
+   
+   
    // "x" e "y" son números enteros.
    // Retornar el número más grande.
    // Si son iguales, retornar cualquiera de los dos.
@@ -8,6 +22,11 @@ function obtenerMayor(x, y) {
 }
 
 function mayoriaDeEdad(edad) {
+   if (edad>=18){
+   return "Allowed";
+   }else {
+      return "Not allowed";
+   }
    // Determinar si la persona puede ingresar al evento según su edad.
    // Si tiene 18 años ó más debe retornar el string: "Allowed".
    // Caso contrario: "Not allowed".
@@ -16,6 +35,13 @@ function mayoriaDeEdad(edad) {
 
 function conection(status) {
    // El argumento "status" representa el estado de conexión de un usuario.
+   if (status==1){
+         return "Online";
+   }if (status==2){
+      return "Away";
+   }else{
+      return "Offline";
+   }
    // Si el estado es igual a 1, el usuario está "Online".
    // Si el estado es igual a 2, el usuario está "Away".
    // De lo contrario, presumimos que el usuario está "Offline".
@@ -24,6 +50,19 @@ function conection(status) {
 }
 
 function saludo(idioma) {
+  
+   
+      switch (idioma) {
+        case 'ingles':
+          return 'Hello!';
+        case 'aleman':
+          return 'Guten Tag!';
+        case 'mandarin':
+          return 'Ni Hao!';
+        default:
+          return 'Hola!';
+      }
+    
    // Retornar un saludo en tres diferentes lenguajes:
    // Si "idioma" es "aleman", devuelve "Guten Tag!".
    // Si "idioma" es "mandarin", devuelve "Ni Hao!".
@@ -33,7 +72,24 @@ function saludo(idioma) {
 }
 
 function colors(color) {
-   // La función recibe un color. Retornar el string correspondiente:
+   
+   switch (color) {
+
+      case 'blue':
+        return "This is blue";
+
+      case 'red':
+        return "This is red";
+
+      case 'green':
+        return "This is green";
+        
+        case 'orange':
+         return "This is orange";
+
+      default:
+        return "Color not found";
+    }// La función recibe un color. Retornar el string correspondiente:
    // En caso que el color recibido sea "blue"   --> "This is blue".
    // En caso que el color recibido sea "red"    --> "This is red".
    // En caso que el color recibido sea "green"  --> "This is green".
@@ -44,18 +100,27 @@ function colors(color) {
 }
 
 function esDiezOCinco(num) {
-   // Retornar true si "num" es 10 o 5.
+   if(num==10 || num==5){
+   return true;
+   }else{ return false}// Retornar true si "num" es 10 o 5.
    // De lo contrario, retornar false.
    // Tu código:
 }
 
 function estaEnRango(num) {
-   // Retornar true si "num" es menor que 50 y mayor que 20.
+   if(num<50 && num>20){
+      return true;
+      }else{ return false}// Retornar true si "num" es menor que 50 y mayor que 20.
    // De lo contrario, retornar false.
    // Tu código:
 }
 
 function esEntero(num) {
+   if(parseInt(num)||num==0){
+   return true;
+   }else {
+      return false;
+   }
    // Retornar true si "num" es un entero, ya sea positivo, negativo o cero.
    // Ejemplo: 0.8   ---> false
    // Ejemplo: 1     ---> true
