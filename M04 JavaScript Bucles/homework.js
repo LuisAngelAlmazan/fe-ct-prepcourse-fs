@@ -130,6 +130,19 @@ function esEntero(num) {
 }
 
 function fizzBuzz(num) {
+
+   if (num % 3===0 && num % 5===0){
+      return "fizzbuzz";
+   }
+   if (num % 3===0 ){
+      return "fizz";
+   }
+   if (num % 5===0 ){
+      return "buzz";
+   }else{
+   return false;
+   }
+   
    // Si "num" es divisible entre 3, retorna "fizz".
    // Si "num" es divisible entre 5, retorna "buzz".
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
@@ -138,6 +151,21 @@ function fizzBuzz(num) {
 }
 
 function operadoresLogicos(num1, num2, num3) {
+
+   if (num1 > num2 && num1 > num3 && num1 > 0) {
+      return "Numero 1 es mayor y positivo";
+  } else if (num1 < 0 || num2 < 0 || num3 < 0) {
+      return "Hay negativos";
+  } else if (num3 > num1 && num3 > num2) {
+      return num3 + 1;
+  } else if (num1 === 0 && num2 === 0 && num3 === 0) {
+      return "Error";
+  } else {
+      return false;
+  }
+
+
+   
    // La función recibe tres números distintos.
    // Si num1 es mayor a num2 y a num3, y además es positivo, retornar ---> "Numero 1 es mayor y positivo".
    // Si alguno de los tres números es negativo, retornar ---> "Hay negativos".
@@ -148,6 +176,25 @@ function operadoresLogicos(num1, num2, num3) {
 }
 
 function esPrimo(num) {
+   
+  
+      // Los números negativos, 0 y 1 no son primos
+      if (num <= 1) {
+          return false;
+      }
+  
+      // Verificar si el número es divisible por algún número desde 2 hasta la mitad de num
+      for (let i = 2; i <= num / 2; i++) {
+          if (num % i === 0) {
+              // Si es divisible por algún número, no es primo
+              return false;
+          }
+      }
+  
+      // Si no fue divisible por ningún número, es primo
+      return true;
+  
+
    // Retornar true si "num" es primo.
    // De lo contrario retorna false.
    // [Pista 1]: un número primo sólo es divisible por sí mismo y por 1.
@@ -157,18 +204,38 @@ function esPrimo(num) {
 }
 
 function esVerdadero(valor) {
+   if (valor===true){
+      return "Soy verdadero";
+   }else {
+      return "Soy falso";
+   }
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
 }
 
 function tieneTresDigitos(num) {
+   let numeroComoCadena = num.toString();
+
+   // Verificar si la longitud de la cadena es igual a 3
+   return numeroComoCadena.length === 3;
+
+
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
 }
 
 function doWhile(num) {
+
+   let contador = 0;
+
+   do {
+       num += 5;
+       contador++;
+   } while (contador < 8);
+
+   return num;
    // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
    // Retornar el valor final.
    // Utilizar el bucle Do-While.

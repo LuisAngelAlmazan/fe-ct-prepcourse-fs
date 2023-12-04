@@ -31,8 +31,8 @@ function multiplica(x, y) {
 }
 
 function obtenerResto(x, y) {
-   resto = x % y;
-   return resto;// Obten el resto de la división de "x" entre "y".
+   restar = x % y;
+   return restar;// Obten el resto de la división de "x" entre "y".
    // Tu código:
 }
 
